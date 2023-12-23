@@ -16,7 +16,7 @@ I really like this definition of a polymorphic association definition from this 
 At its core, a polymorphic association is a database design concept that allows a single database field to be associated with multiple types of records. In other words, it permits a single column to act as a bridge between multiple tables, enabling a record in one table to be linked to records in multiple other tables.
 </blockquote>
 
-The main reason to use them is that without join tables it makes it harder and less efficient to make queries with tables that has this many to many relationship.
+The main reason to use join tables to represent many to many assocations, is because without join tables it makes it harder and less efficient to make queries with tables that has this many to many relationship.
 
 ### How are they implemented in SQL
 
