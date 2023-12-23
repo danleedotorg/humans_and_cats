@@ -19,4 +19,12 @@
     <%= cat.gender %>
   </p>
 
+  <div>
+    <strong>Humen:</strong>
+    <% cat.humen.each do |human| %>
+      <div style="border: 1px solid red; margin-left: 24px;">
+        <%= render human %>
+      </div>
+    <% end %>
+  </div>
 </div>

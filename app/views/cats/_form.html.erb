@@ -28,7 +28,12 @@
 
   <div>
     <%= form.label :gender, style: "display: block" %>
-    <%= form.number_field :gender %>
+    <%= form.select :gender, Cat.genders.keys %>
+  </div>
+
+  <div>
+    <%= form.label :human_ids, 'Add Humans', style: 'display: block;' %>
+    <%= form.select :human_ids, options_for_select(@humans.pluck(:name, :id), @cat.humen.pluck(:id)), { include_hidden: false },  multiple: true %>
   </div>
 
   <div>

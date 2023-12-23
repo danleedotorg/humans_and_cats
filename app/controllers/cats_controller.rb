@@ -1,9 +1,10 @@
 class CatsController < ApplicationController
   before_action :set_cat, only: %i[ show edit update destroy ]
+  before_action :set_humans, only: %i[ new edit ]
 
   # GET /cats or /cats.json
   def index
-    @cats = Cat.all
+    @cats = Cat.eager_load(:humen).all
   end
 
   # GET /cats/1 or /cats/1.json
@@ -60,11 +61,15 @@ class CatsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cat
-      @cat = Cat.find(params[:id])
+      @cat = Cat.eager_load(:humen).find(params[:cat_id] || params[:id])
+    end
+
+    def set_humans
+      @humans = Human.all
     end
 
     # Only allow a list of trusted parameters through.
     def cat_params
-      params.require(:cat).permit(:name, :age, :breed, :gender)
+      params.require(:cat).permit(:name, :age, :breed, :gender, :human_ids => [])
     end
 end
