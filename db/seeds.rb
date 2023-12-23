@@ -16,18 +16,13 @@ require 'faker'
   puts Cat.create!(name: Faker::Name.name, age: rand(1..20), gender: [0,1,2].sample, breed: Faker::Creature::Cat.breed)
 end
 
-last_cat = Cat.last
 
-# last cat has first 3 humans
-Human.first(3).each do |human|
-  puts CatsHuman.create!(cat: last_cat, human: human)
-end
+all_cats = Cat.all
+all_humans = Human.all
 
-last_human = Human.last
-
-# last human owns 3 cats
-Cat.first(3).each do |cat|
-  puts CatsHuman.create!(cat: cat, human: last_human)
+# randomly set associations
+100.times do |i|
+  CatsHuman.create!(cat: all_cats.sample, human: all_humans.sample)
 end
 
 
