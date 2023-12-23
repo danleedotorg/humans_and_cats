@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+pp 'generating seeds'
+
+require 'faker'
+
+100.times do |i|
+  puts Human.create!(name: Faker::Name, age: rand(1..100), gender: [0,1,2].sample)
+end
