@@ -12,6 +12,6 @@ pp 'generating seeds'
 require 'faker'
 
 100.times do |i|
-  puts Human.create!(name: Faker::Name, age: rand(1..100), gender: [0,1,2].sample)
-  puts Cat.create!(name: Faker::Name, age: rand(1..100), gender: [0,1,2].sample, breed: Faker::Creature::Cat.breed)
+  puts Human.create!(name: Faker::Name.name, age: rand(1..100), gender: [0,1,2].sample)
+  puts Cat.create!(name: Faker::Name.name, age: rand(1..100), gender: [0,1,2].sample, breed: Faker::Creature::Cat.breed)
 end
