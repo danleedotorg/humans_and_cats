@@ -10,7 +10,7 @@ TODO: add youtube link
 Join tables allow us to create a polymorphic association that encapsulates the idea of a "many to many" relationship.
 
 **Note: If you do not know what a polymorphic association is**
-I really like this definition of a polymorphic association definition from this medium article: [https://patrickkarsh.medium.com/polymorphic-associations-database-design-basics-17faf2eb313](https://patrickkarsh.medium.com/polymorphic-associations-database-design-basics-17faf2eb313)
+I really like this definition of a polymorphic association from this medium article: [https://patrickkarsh.medium.com/polymorphic-associations-database-design-basics-17faf2eb313](https://patrickkarsh.medium.com/polymorphic-associations-database-design-basics-17faf2eb313)
 <blockquote>
 
 At its core, a polymorphic association is a database design concept that allows a single database field to be associated with multiple types of records. In other words, it permits a single column to act as a bridge between multiple tables, enabling a record in one table to be linked to records in multiple other tables.
