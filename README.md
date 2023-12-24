@@ -3,7 +3,7 @@
 ## Introduction
 This repo is a Ruby on Rails project that shows how and why you should use join tables. This is part of a video lesson that is recorded here:
 
-TODO: add youtube link
+[https://www.youtube.com/watch?v=fTzmumzPeEA](https://www.youtube.com/watch?v=fTzmumzPeEA)
 
 ## What are join tables and what are their purpose?
 
